@@ -8,13 +8,14 @@ import jobCardDetails from './jobCardDetails'
 
 
 export function RenderJobCardsForPage2(props){
+    // console.log(jobCardDetails[0].roleName)
     return(
         <div>
             {/* <Grid container direction="row"> */}
-            {jobCardDetails && Object.keys(jobCardDetails).map(
+            {jobCardDetails && jobCardDetails.map(
                 jobCardContent => (
                     <JobCardForPage2 
-                        id = { jobCardContent.id }
+                        id = { [jobCardContent.id, console.log(jobCardContent.location)]}
                         logo = { jobCardContent.logo }
                         location = { jobCardContent.location }
                         roleName = { jobCardContent.roleName }

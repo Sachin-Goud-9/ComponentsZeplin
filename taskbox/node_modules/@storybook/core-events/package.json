@@ -1,0 +1,88 @@
+{
+  "_from": "@storybook/core-events@6.3.0",
+  "_id": "@storybook/core-events@6.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ZGTm5nQvFLlc2LVgoDyxo99MbQcFqQzkxIQReFkO7hPwwkcjcwmdBtnlmkn9/p5QQ5/8aU0k+ceCkrBNu1M83w==",
+  "_location": "/@storybook/core-events",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@storybook/core-events@6.3.0",
+    "name": "@storybook/core-events",
+    "escapedName": "@storybook%2fcore-events",
+    "scope": "@storybook",
+    "rawSpec": "6.3.0",
+    "saveSpec": null,
+    "fetchSpec": "6.3.0"
+  },
+  "_requiredBy": [
+    "/@storybook/addon-actions",
+    "/@storybook/addon-backgrounds",
+    "/@storybook/addon-docs",
+    "/@storybook/addon-links",
+    "/@storybook/addon-viewport",
+    "/@storybook/addons",
+    "/@storybook/api",
+    "/@storybook/builder-webpack4",
+    "/@storybook/channel-postmessage",
+    "/@storybook/client-api",
+    "/@storybook/core-client",
+    "/@storybook/ui",
+    "/storybook-addon-outline"
+  ],
+  "_resolved": "https://registry.npmjs.org/@storybook/core-events/-/core-events-6.3.0.tgz",
+  "_shasum": "5e220a866db5b93550b5c3464774a7b10ad036a6",
+  "_spec": "@storybook/core-events@6.3.0",
+  "_where": "/home/saching/reactjs-files/reactprojects/GreenCommute/componentstesting/taskbox/node_modules/@storybook/addon-actions",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "core-js": "^3.8.2"
+  },
+  "deprecated": false,
+  "description": "Event names used in storybook core",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "gitHead": "9a381339dee8faf13933265cf2600577ca2c20e8",
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/lib/core-events",
+  "keywords": [
+    "storybook"
+  ],
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@storybook/core-events",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storybookjs/storybook.git",
+    "directory": "lib/core-events"
+  },
+  "sbmodern": "dist/modern/index.js",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "sideEffects": false,
+  "types": "dist/ts3.9/index.d.ts",
+  "typesVersions": {
+    "<3.8": {
+      "*": [
+        "dist/ts3.4/*"
+      ]
+    }
+  },
+  "version": "6.3.0"
+}

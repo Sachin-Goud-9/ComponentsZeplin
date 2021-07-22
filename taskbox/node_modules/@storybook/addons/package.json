@@ -1,0 +1,103 @@
+{
+  "_from": "@storybook/addons@6.3.0",
+  "_id": "@storybook/addons@6.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-/dcq20HtdSw5+cG8znR59Y/uv2zCR2VjRK3N52IkGWk162b/UbSjjL0PhNnnQFGpH9Fruft6mqvjTAKT41kmJw==",
+  "_location": "/@storybook/addons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@storybook/addons@6.3.0",
+    "name": "@storybook/addons",
+    "escapedName": "@storybook%2faddons",
+    "scope": "@storybook",
+    "rawSpec": "6.3.0",
+    "saveSpec": null,
+    "fetchSpec": "6.3.0"
+  },
+  "_requiredBy": [
+    "/@storybook/addon-actions",
+    "/@storybook/addon-backgrounds",
+    "/@storybook/addon-controls",
+    "/@storybook/addon-docs",
+    "/@storybook/addon-essentials",
+    "/@storybook/addon-links",
+    "/@storybook/addon-toolbars",
+    "/@storybook/addon-viewport",
+    "/@storybook/builder-webpack4",
+    "/@storybook/client-api",
+    "/@storybook/core-client",
+    "/@storybook/manager-webpack4",
+    "/@storybook/react",
+    "/@storybook/source-loader",
+    "/@storybook/ui",
+    "/storybook-addon-outline"
+  ],
+  "_resolved": "https://registry.npmjs.org/@storybook/addons/-/addons-6.3.0.tgz",
+  "_shasum": "a86849f46a654d2d78b91fad0088264a32d4e58e",
+  "_spec": "@storybook/addons@6.3.0",
+  "_where": "/home/saching/reactjs-files/reactprojects/GreenCommute/componentstesting/taskbox/node_modules/@storybook/addon-essentials",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@storybook/api": "6.3.0",
+    "@storybook/channels": "6.3.0",
+    "@storybook/client-logger": "6.3.0",
+    "@storybook/core-events": "6.3.0",
+    "@storybook/router": "6.3.0",
+    "@storybook/theming": "6.3.0",
+    "core-js": "^3.8.2",
+    "global": "^4.4.0",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "deprecated": false,
+  "description": "Storybook addons store",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "gitHead": "9a381339dee8faf13933265cf2600577ca2c20e8",
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/lib/addons",
+  "keywords": [
+    "storybook"
+  ],
+  "license": "MIT",
+  "main": "dist/cjs/public_api.js",
+  "module": "dist/esm/public_api.js",
+  "name": "@storybook/addons",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storybookjs/storybook.git",
+    "directory": "lib/addons"
+  },
+  "sbmodern": "dist/modern/public_api.js",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "sideEffects": false,
+  "types": "dist/ts3.9/public_api.d.ts",
+  "typesVersions": {
+    "<3.8": {
+      "*": [
+        "dist/ts3.4/*"
+      ]
+    }
+  },
+  "version": "6.3.0"
+}

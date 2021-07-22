@@ -1,0 +1,90 @@
+{
+  "_from": "@storybook/source-loader@6.3.0",
+  "_id": "@storybook/source-loader@6.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-5LpqY5uu35Fg01D7Zu0xAT7ow6tcuHz+fkIxsGAJhzWovbV5NYl/BP8WSPv7TH+WjYve+RI2Xp6a9JFrgi9gpQ==",
+  "_location": "/@storybook/source-loader",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@storybook/source-loader@6.3.0",
+    "name": "@storybook/source-loader",
+    "escapedName": "@storybook%2fsource-loader",
+    "scope": "@storybook",
+    "rawSpec": "6.3.0",
+    "saveSpec": null,
+    "fetchSpec": "6.3.0"
+  },
+  "_requiredBy": [
+    "/@storybook/addon-docs"
+  ],
+  "_resolved": "https://registry.npmjs.org/@storybook/source-loader/-/source-loader-6.3.0.tgz",
+  "_shasum": "d1bbbb9c350c89f1207233d209694dcac5350e76",
+  "_spec": "@storybook/source-loader@6.3.0",
+  "_where": "/home/saching/reactjs-files/reactprojects/GreenCommute/componentstesting/taskbox/node_modules/@storybook/addon-docs",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@storybook/addons": "6.3.0",
+    "@storybook/client-logger": "6.3.0",
+    "@storybook/csf": "0.0.1",
+    "core-js": "^3.8.2",
+    "estraverse": "^5.2.0",
+    "global": "^4.4.0",
+    "loader-utils": "^2.0.0",
+    "lodash": "^4.17.20",
+    "prettier": "~2.2.1",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "deprecated": false,
+  "description": "Source loader",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "gitHead": "9a381339dee8faf13933265cf2600577ca2c20e8",
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/lib/source-loader",
+  "keywords": [
+    "lib",
+    "storybook"
+  ],
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@storybook/source-loader",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storybookjs/storybook.git",
+    "directory": "lib/source-loader"
+  },
+  "sbmodern": "dist/modern/index.js",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "sideEffects": false,
+  "types": "dist/ts3.9/index.d.ts",
+  "typesVersions": {
+    "<3.8": {
+      "*": [
+        "dist/ts3.4/*"
+      ]
+    }
+  },
+  "version": "6.3.0"
+}

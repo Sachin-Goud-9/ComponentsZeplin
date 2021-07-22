@@ -1,0 +1,93 @@
+{
+  "_from": "@storybook/router@6.3.0",
+  "_id": "@storybook/router@6.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-RJcRVI6IqffLOU6k9GrlB3cXLLK5TRmFSIjwW3lEHVhj313e56uLRYTylT11aBf8bPEQ+MeQVe2sqQUBG3Ugng==",
+  "_location": "/@storybook/router",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@storybook/router@6.3.0",
+    "name": "@storybook/router",
+    "escapedName": "@storybook%2frouter",
+    "scope": "@storybook",
+    "rawSpec": "6.3.0",
+    "saveSpec": null,
+    "fetchSpec": "6.3.0"
+  },
+  "_requiredBy": [
+    "/@storybook/addon-links",
+    "/@storybook/addons",
+    "/@storybook/api",
+    "/@storybook/builder-webpack4",
+    "/@storybook/ui"
+  ],
+  "_resolved": "https://registry.npmjs.org/@storybook/router/-/router-6.3.0.tgz",
+  "_shasum": "8b63773f11fe4c6749ccfda5d725c94275f0a459",
+  "_spec": "@storybook/router@6.3.0",
+  "_where": "/home/saching/reactjs-files/reactprojects/GreenCommute/componentstesting/taskbox/node_modules/@storybook/addons",
+  "bugs": {
+    "url": "https://github.com/storybookjs/storybook/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@reach/router": "^1.3.4",
+    "@storybook/client-logger": "6.3.0",
+    "@types/reach__router": "^1.3.7",
+    "core-js": "^3.8.2",
+    "fast-deep-equal": "^3.1.3",
+    "global": "^4.4.0",
+    "lodash": "^4.17.20",
+    "memoizerific": "^1.11.3",
+    "qs": "^6.10.0",
+    "ts-dedent": "^2.0.0"
+  },
+  "deprecated": false,
+  "description": "Core Storybook Router",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/storybook"
+  },
+  "gitHead": "9a381339dee8faf13933265cf2600577ca2c20e8",
+  "homepage": "https://github.com/storybookjs/storybook/tree/master/lib/router",
+  "keywords": [
+    "storybook"
+  ],
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@storybook/router",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storybookjs/storybook.git",
+    "directory": "lib/router"
+  },
+  "sbmodern": "dist/modern/index.js",
+  "scripts": {
+    "prepare": "node ../../scripts/prepare.js"
+  },
+  "sideEffects": false,
+  "types": "dist/ts3.9/index.d.ts",
+  "typesVersions": {
+    "<3.8": {
+      "*": [
+        "dist/ts3.4/*"
+      ]
+    }
+  },
+  "version": "6.3.0"
+}

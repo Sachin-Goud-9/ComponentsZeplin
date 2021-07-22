@@ -106,7 +106,11 @@ props
 	// console.log(props.)
 	// const routeArray = [1, 2, 3, 4];
 	// routeArray.map((num) => console.log(num);
-	console.log(props.roleName)
+	
+	
+	// console.log(props.roleName)
+	// console.log(props.companyName)
+	// console.log(props.location)
 
 	if (open) {
 		return (
@@ -117,9 +121,9 @@ props
 			// >
 			<Grid>
 				<Card className={classes.root} variant="outlined">
-					<CardActionArea>
-						<Button onClick={() => { console.log("Clicked Card.") }}>
-						<div className={classes.header}>
+					{/* <CardActionArea> */}
+						{/* <Button onClick={() => { console.log("Clicked Card.") }}> */}
+						<Grid container direction="row" className={classes.header}>
 							<MyImage
 								className={classes.logoPadding}
 								alt={props.logo}
@@ -127,7 +131,7 @@ props
 								width="80px"
 								height="80px"
 							/>
-							<div className={` ${classes.spacing}`}>
+							<Grid item direction="row" className={` ${classes.spacing}`}>
 								<MyTypography variant="body1" component="p">
 									2d
 								</MyTypography>
@@ -135,15 +139,16 @@ props
 									className={classes.moreIconPadding}
 									fontSize="small"
 								/>
-							</div>
-						</div>
+							</Grid>
+						</Grid>
 						<CardContent>
+							<Grid container direction="row">
 							<MyTypography gutterBottom className={classes.roleTypoHeader}>
 								{ props.roleName }
 							</MyTypography>
-
+							
 							<MyTypography
-                                className={` ${classes.companyLocationTypoHeader} `}
+                                className={classes.companyLocationTypoHeader} 
 							>
 								{props.companyName}
 							</MyTypography>
@@ -158,14 +163,14 @@ props
 							</MyTypography>
 							{/* {Object.values(icons).map((value) => value)} */}
 							<div className={classes.iconGrp}> 
-                                {icons && Object.keys(icons).map(iconName => (
+                                {icons && icons.map(iconName => (
                                     <iconName className={classes.icons} /> 
                                 ))}
                             </div> 
-						
+							</Grid>
 						</CardContent>
-						</Button>
-					</CardActionArea>
+						{/* </Button> */}
+					{/* </CardActionArea> */}
 				</Card>
 				</Grid>
 			// </div>

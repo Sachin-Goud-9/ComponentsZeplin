@@ -1,0 +1,122 @@
+{
+  "_from": "function-bind@1.1.1",
+  "_id": "function-bind@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==",
+  "_location": "/function-bind",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "function-bind@1.1.1",
+    "name": "function-bind",
+    "escapedName": "function-bind",
+    "rawSpec": "1.1.1",
+    "saveSpec": null,
+    "fetchSpec": "1.1.1"
+  },
+  "_requiredBy": [
+    "/array-includes/call-bind",
+    "/array-includes/get-intrinsic",
+    "/array.prototype.flatmap",
+    "/call-bind",
+    "/es-abstract",
+    "/es-abstract/call-bind",
+    "/es-abstract/get-intrinsic",
+    "/es-get-iterator/call-bind",
+    "/function.prototype.name/call-bind",
+    "/get-intrinsic",
+    "/has",
+    "/is-boolean-object/call-bind",
+    "/is-regex/call-bind",
+    "/object-is/call-bind",
+    "/object.entries/call-bind",
+    "/object.fromentries/call-bind",
+    "/object.getownpropertydescriptors/call-bind",
+    "/object.values/call-bind",
+    "/promise.allsettled/call-bind",
+    "/promise.prototype.finally",
+    "/regexp.prototype.flags/call-bind",
+    "/string.prototype.matchall/call-bind",
+    "/string.prototype.matchall/get-intrinsic",
+    "/string.prototype.padend/call-bind",
+    "/string.prototype.padstart/call-bind",
+    "/string.prototype.trimend/call-bind",
+    "/string.prototype.trimstart/call-bind",
+    "/symbol.prototype.description/call-bind",
+    "/unbox-primitive"
+  ],
+  "_resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz",
+  "_shasum": "a56899d3ea3c9bab874bb9773b7c5ede92f4895d",
+  "_spec": "function-bind@1.1.1",
+  "_where": "/home/saching/reactjs-files/reactprojects/GreenCommute/componentstesting/taskbox/node_modules/has",
+  "author": {
+    "name": "Raynos",
+    "email": "raynos2@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Raynos/function-bind/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Raynos"
+    },
+    {
+      "name": "Jordan Harband",
+      "url": "https://github.com/ljharb"
+    }
+  ],
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Implementation of Function.prototype.bind",
+  "devDependencies": {
+    "@ljharb/eslint-config": "^12.2.1",
+    "covert": "^1.1.0",
+    "eslint": "^4.5.0",
+    "jscs": "^3.0.7",
+    "tape": "^4.8.0"
+  },
+  "homepage": "https://github.com/Raynos/function-bind",
+  "keywords": [
+    "function",
+    "bind",
+    "shim",
+    "es5"
+  ],
+  "license": "MIT",
+  "main": "index",
+  "name": "function-bind",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Raynos/function-bind.git"
+  },
+  "scripts": {
+    "coverage": "covert test/*.js",
+    "eslint": "eslint *.js */*.js",
+    "jscs": "jscs *.js */*.js",
+    "lint": "npm run jscs && npm run eslint",
+    "posttest": "npm run coverage -- --quiet",
+    "pretest": "npm run lint",
+    "test": "npm run tests-only",
+    "tests-only": "node test"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  },
+  "version": "1.1.1"
+}
