@@ -41,17 +41,10 @@ const useStyles = makeStyles((theme) => ({
 
 
     const classes = useStyles();
-    var noBlur=text.slice(0,text.length-1);
-    
-    // const noBlur = [];
+    const noBlur=text.slice(0,text.length-1);
+    // console.log(text.slice(0,text.length-1))
+    // console.log(typeof(noBlur))
     var blur = text[text.length-1];
-    // // if(text){
-    //     const len = text.length;
-    //     for(var i=0;i<len-1;i++){
-    //         noBlur.push(text[i]);
-    //     }
-    //     blur.push(text[len-1]);
-    // }
  return (
      <div classeName={classes.alignment}>
         <MyTypography children={title} variant="h6" component="h5" className={classes.typographyHeaderStyle} />

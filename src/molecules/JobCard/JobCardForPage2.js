@@ -103,9 +103,10 @@ props
 	const classes = useStyles();
 	const [open, setOpen] = useState(true);
 	const icons = props.icons
-
+	// console.log(props.)
 	// const routeArray = [1, 2, 3, 4];
-	// routeArray.map((num) => console.log(num));
+	// routeArray.map((num) => console.log(num);
+	console.log(props.roleName)
 
 	if (open) {
 		return (

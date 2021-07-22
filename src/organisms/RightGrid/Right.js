@@ -47,7 +47,7 @@ const Right = (  {positionAppliedName,companyName,locationName,imageSrc,head,bod
         border:'2px solid #5ac568',
         width:'208px',
         height:'50px',
-        marginTop:'350px',
+        marginTop:'500px',
         position: "fixed",
         marginLeft:'100px'
     },
