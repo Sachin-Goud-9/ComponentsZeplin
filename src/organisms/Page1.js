@@ -48,11 +48,11 @@ export default function Page1(props){
                          isNumberTag="false"
                          numberTag=""
                          textSize="26px"
-    color="#19293b"/>
+                        color="#19293b"/>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                     <JobSearch/>
-                </Grid>
+                </Grid> */}
             </Grid>
         </div>
     );

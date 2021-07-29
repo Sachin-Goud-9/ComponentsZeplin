@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import MyTypography from "../../atoms/MyTypography/MyTypography";
 import MyImage from '../../atoms/MyImage/MyImage';
+import { Grid } from "@material-ui/core";
 
 
 const JobCardInfo = ( {positionAppliedName,companyName,locationName,imageSrc} )  => {
@@ -41,14 +42,14 @@ const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <div>
+        <Grid>
             <MyImage src={imageSrc} height="50px" width="50px" alt={companyName}/>
-        </div>
-        <div className={classes.cardDetailsDisplay}>
+        </Grid>
+        <Grid className={classes.cardDetailsDisplay}>
             <MyTypography children={positionAppliedName} variant="h6" component="h5" className={classes.typographyHeaderStyle} />
             <MyTypography children={companyName} variant="body2" component="p" className={classes.typographyParagraphStyle}/>
             <MyTypography children={locationName} variant="body2" component="p" className={classes.typographyParagraphStyle} />
-        </div>
+        </Grid>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import MyTypography from "../../atoms/MyTypography/MyTypography";
 import MyImage from '../../atoms/MyImage/MyImage';
+import customtheme from "../../theme";
+import { Grid } from "@material-ui/core";
 
 const JobCardInfo = ( {cabServiceName,costEstimation,imageSrc} )  => {
 
@@ -61,23 +63,24 @@ const JobCardInfo = ( {cabServiceName,costEstimation,imageSrc} )  => {
 const classes = useStyles();
 
   return (
-
+    <ThemeProvider theme={ customtheme } >
     <div className={classes.root}>
-        <div className={classes.alignStart}>
-            <div>
+        <Grid className={classes.alignStart}>
+            <Grid>
                 <MyImage src={imageSrc} height="60px" width="60px" alt={cabServiceName} />
-            </div>
-            <div className={classes.cardDetailsDisplay}>
-                <MyTypography children={cabServiceName} variant="h6" component="h5" className={classes.typographyHeaderStyle} />
-                <MyTypography children={costEstimation} variant="body2" component="p" className={classes.typographyParagraphStyle}/>
-            </div>
-        </div>
+            </Grid>
+            <Grid className={classes.cardDetailsDisplay}>
+                <MyTypography className={classes.typographyHeaderStyle} children={cabServiceName} variant="h6" component="h5"  />
+                <MyTypography className={classes.typographyParagraphStyle} children={costEstimation} variant="body2" component="p" />
+            </Grid>
+        </Grid>
 
-        <div className={classes.alignLast}>
+        <Grid className={classes.alignLast}>
             <MyTypography className={classes.typographyBookNow}>{"Book Now"}</MyTypography>
-        </div>
+        </Grid>
         
     </div>
+    </ThemeProvider>
   );
 }
 

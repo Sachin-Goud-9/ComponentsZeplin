@@ -1,8 +1,11 @@
-import { Card, CardActionArea, Grid, makeStyles } from "@material-ui/core";
-import React from "react"
+import { Button, Card, CardActionArea, CardContent, Grid, makeStyles } from "@material-ui/core";
+import React, { useState } from "react"
 import MyImage from "../../atoms/MyImage/MyImage";
 import MyTypography from "../../atoms/MyTypography/MyTypography";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import Right from "../../organisms/RightGrid/Right";
+import { useDispatch } from "react-redux";
+import { showJob } from '../../store/actions';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -81,30 +84,36 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function JobCardForPage3(props){
-    const icons = props.icons
+    const icons = props.job.icons
     const classes = useStyles();
+    const [detailsToBeDisplayedId, setDetailsToBeDisplayed] = React.useState(0);
+    const handleDetailsToBeDisplayed = (newId) => {
+        setDetailsToBeDisplayed(newId);
+    };
+    const dispatch = useDispatch();
     return(
-        <div>
+        <div >
             <Card variant="outlined" className={classes.root}>
-					<CardActionArea>
+					<CardActionArea onClick = { () => { dispatch(showJob(props.job)) }} >
+                    <CardContent>
 						<Grid container>
 							<Grid item xs={1}>
-								<MyImage alt={props.logo} src={props.logo} width="50px" height="50px" />
+								<MyImage alt={props.job.logo} src={props.job.logo} width="50px" height="50px" />
 							</Grid>
 							<Grid item xs={8} className={classes.jobInfoPadding}>
 								<MyTypography gutterBottom className={classes.roleTypoHeader}>
-									{props.roleName}
+									{props.job.roleName}
 								</MyTypography>
 
 								<MyTypography
 									className={` ${classes.companyLocationTypoHeader} ${classes.padding} `}
 								>
-									{props.companyName}
+									{props.job.companyName}
 								</MyTypography>
 								<MyTypography
 									className={` ${classes.companyLocationTypoHeader} `}
 								>
-									{props.location}
+									{props.job.location}
 								</MyTypography>
 							</Grid>
                             <Grid item xs={1}></Grid>
@@ -116,14 +125,15 @@ export function JobCardForPage3(props){
 									<MoreHorizIcon fontSize="small" />
 								</div>
                                 <div className={classes.iconGrp}> 
-                                    {icons && Object.keys(icons).map(iconName => (
+                                    {/* {icons && icons.map(iconName => (
                                         <span>{iconName} </span>
-                                    ))}
-                                   
+                                    ))} */}
+                                    
                                 </div> 
 							</Grid>
 						</Grid>
-					</CardActionArea>
+                    </CardContent>
+                    </CardActionArea>
 				</Card>
         </div>
     );

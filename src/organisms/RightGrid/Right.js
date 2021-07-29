@@ -2,12 +2,21 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import JobCardInfo from '../../molecules/JobCardInfo/JobCardInfo'
-import green from '@material-ui/core'
+import green, { Typography } from '@material-ui/core'
 import DescriptionCard from '../../molecules/DescriptionCard/DescriptionCard'
 import DescriptionList from '../../molecules/DescriptionList/DescriptionList'
-const Right = (  {positionAppliedName,companyName,locationName,imageSrc,head,body,title,text} )  => {
+import { useDispatch } from "react-redux";
+import { savedJob } from "../../store/actions";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+// {positionAppliedName,companyName,locationName,imageSrc,head,body,title,text}
 
-  const useStyles = makeStyles((theme) => ({
+
+
+
+
+
+const useStyles = makeStyles((theme) => ({
     columnAlignment: {
         display : 'inline-flex',
         flexDirection : 'column',
@@ -56,20 +65,40 @@ const Right = (  {positionAppliedName,companyName,locationName,imageSrc,head,bod
 
 }));
 
-const classes = useStyles();
+
+
+
+
+
+
+
+toast.configure()
+export default function Right(props)   {
+
+  const classes = useStyles();
+  const dispatch = useDispatch();
+  const job = props.job
+
+  const showToastMessageForSaveOperation = () => {
+    //   toast('Job Saved',{ position: toast.POSITION.TOP_RIGHTT, autoClose: 2000    })
+      alert('Job Saved')
+  }
+
+  const showToastMessageForApplyOperation = () => {
+    //   toast('Job Saved',{ position: toast.POSITION.TOP_RIGHTT, autoClose: 2000    })
+      alert('Job Applied')
+  }
 
   return (
     <div className={classes.columnAlignment}>
-        <JobCardInfo positionAppliedName={positionAppliedName} companyName={companyName} locationName={locationName} imageSrc={imageSrc} />
+        <JobCardInfo positionAppliedName={job.roleName} companyName={job.companyName} locationName={ job.locationName } imageSrc={job.imageSrc} />
         <div className={ classes.buttonAlignment}>
-        <Button  className={` ${classes.buttonStyle} ${classes.buttonSave}` }   > Save</Button>
-        <Button  className={` ${classes.buttonStyle} ${classes.buttonApply}` }  variant="contained"> Apply</Button>
+        <Button  className={` ${classes.buttonStyle} ${classes.buttonSave}` } onClick = {() => {showToastMessageForSaveOperation(); dispatch(savedJob(job))}} > Save</Button>
+        <Button  className={` ${classes.buttonStyle} ${classes.buttonApply}` }  variant="contained" onClick = {() => {showToastMessageForApplyOperation(); dispatch(savedJob(job))}}> Apply</Button>
         </div>
-        <DescriptionCard head={head} body={body} />
-        <DescriptionList title={title} text={text} />
+        <DescriptionCard head={job.head} body={job.body} />
+        <DescriptionList title={job.title} text={job.text} />
         <Button  className={`  ${classes.buttonRoutes}` }  variant="contained"> Green Commute Routes</Button>
     </div>
   );
 }
-
-export default Right;

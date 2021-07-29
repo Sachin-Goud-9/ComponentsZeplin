@@ -8,6 +8,10 @@ import MyTypography from "../../atoms/MyTypography/MyTypography";
 import MyImage from "../../atoms/MyImage/MyImage";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button, CardActions, Grid } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { showJob } from "../../store/actions";
+import { LocalTaxiOutlined } from "@material-ui/icons";
+import LocalTaxiOutlinedIcon from '@material-ui/icons/LocalTaxiOutlined';
 
 
 const useStyles = makeStyles({
@@ -102,32 +106,20 @@ props
 ) {
 	const classes = useStyles();
 	const [open, setOpen] = useState(true);
-	const icons = props.icons
-	// console.log(props.)
-	// const routeArray = [1, 2, 3, 4];
-	// routeArray.map((num) => console.log(num);
-	
-	
-	// console.log(props.roleName)
-	// console.log(props.companyName)
-	// console.log(props.location)
+	const icons = ["LocalTaxiOutlinedIcon", "TrainOutlined" , "DirectionsBusOutlined"  , "MotorcycleOutlined" ]
+	const dispatch = useDispatch();
 
-	if (open) {
+
 		return (
-			// <div
-			// 	onClick={() => {
-			// 		setOpen(!open);
-			// 	}}
-			// >
 			<Grid>
 				<Card className={classes.root} variant="outlined">
-					{/* <CardActionArea> */}
+					{/* <CardActionArea onClick = { () => { dispatch(showJob(props.job)) }}> */}
 						{/* <Button onClick={() => { console.log("Clicked Card.") }}> */}
 						<Grid container direction="row" className={classes.header}>
 							<MyImage
 								className={classes.logoPadding}
-								alt={props.logo}
-								src={props.logo}
+								alt={props.job.logo}
+								src={props.job.logo}
 								width="80px"
 								height="80px"
 							/>
@@ -144,18 +136,18 @@ props
 						<CardContent>
 							<Grid container direction="row">
 							<MyTypography gutterBottom className={classes.roleTypoHeader}>
-								{ props.roleName }
+								{ props.job.roleName }
 							</MyTypography>
 							
 							<MyTypography
                                 className={classes.companyLocationTypoHeader} 
 							>
-								{props.companyName}
+								{props.job.companyName}
 							</MyTypography>
 							<MyTypography
                                 className={classes.companyLocationTypoHeader}
 							>
-								{props.location}
+								{props.job.location}
 							</MyTypography>
 
 							<MyTypography gutterBottom className={classes.commuteRoutesTypo}>
@@ -164,8 +156,10 @@ props
 							{/* {Object.values(icons).map((value) => value)} */}
 							<div className={classes.iconGrp}> 
                                 {icons && icons.map(iconName => (
-                                    <iconName className={classes.icons} /> 
+                                    // <iconName className={classes.icons} /> 
+									<span>{iconName} </span>
                                 ))}
+								{/* <LocalTaxiOutlined/> */}
                             </div> 
 							</Grid>
 						</CardContent>
@@ -175,55 +169,54 @@ props
 				</Grid>
 			// </div>
 		);
-	} else {
-		return (
-			<div
-				onClick={() => {
-					setOpen(!open);
-				}}
-			>
+		// return (
+		// 	<div
+		// 		onClick={() => {
+		// 			setOpen(!open);
+		// 		}}
+		// 	>
                 
-				<Card variant="outlined" className={classes.root2}>
-					<CardActionArea>
-						<Grid container>
-							<Grid item xs={1}>
-								<MyImage alt={props.logo} src={props.logo} width="50px" height="50px" />
-							</Grid>
-							<Grid item xs={8} className={classes.jobInfoPadding}>
-								<MyTypography gutterBottom className={classes.roleTypoHeader}>
-									{props.roleName}
-								</MyTypography>
+		// 		<Card variant="outlined" className={classes.root2}>
+		// 			<CardActionArea>
+		// 				<Grid container>
+		// 					<Grid item xs={1}>
+		// 						<MyImage alt={props.logo} src={props.logo} width="50px" height="50px" />
+		// 					</Grid>
+		// 					<Grid item xs={8} className={classes.jobInfoPadding}>
+		// 						<MyTypography gutterBottom className={classes.roleTypoHeader}>
+		// 							{props.roleName}
+		// 						</MyTypography>
 
-								<MyTypography
-									className={` ${classes.companyLocationTypoHeader} ${classes.padding} `}
-								>
-									{props.companyName}
-								</MyTypography>
-								<MyTypography
-									className={` ${classes.companyLocationTypoHeader} `}
-								>
-									{props.location}
-								</MyTypography>
-							</Grid>
-                            <Grid item xs={1}></Grid>
-							<Grid item xs={2} className={classes.inCol}>
-								<div className={classes.spacing}>
-									<MyTypography variant="body1" component="p">
-										2d
-									</MyTypography>
-									<MoreHorizIcon fontSize="small" />
-								</div>
-                                <div className={classes.iconGrp}> 
-                                    {icons && Object.keys(icons).map(iconName => (
-                                        <span>{iconName} </span>
-                                    ))}
+		// 						<MyTypography
+		// 							className={` ${classes.companyLocationTypoHeader} ${classes.padding} `}
+		// 						>
+		// 							{props.companyName}
+		// 						</MyTypography>
+		// 						<MyTypography
+		// 							className={` ${classes.companyLocationTypoHeader} `}
+		// 						>
+		// 							{props.location}
+		// 						</MyTypography>
+		// 					</Grid>
+        //                     <Grid item xs={1}></Grid>
+		// 					<Grid item xs={2} className={classes.inCol}>
+		// 						<div className={classes.spacing}>
+		// 							<MyTypography variant="body1" component="p">
+		// 								2d
+		// 							</MyTypography>
+		// 							<MoreHorizIcon fontSize="small" />
+		// 						</div>
+        //                         <div className={classes.iconGrp}> 
+        //                             {icons && Object.keys(icons).map(iconName => (
+        //                                 <span>{iconName} </span>
+        //                             ))}
                                    
-                                </div> 
-							</Grid>
-						</Grid>
-					</CardActionArea>
-				</Card>
-			</div>
-		);
-	}
+        //                         </div> 
+		// 					</Grid>
+		// 				</Grid>
+		// 			</CardActionArea>
+		// 		</Card>
+		// 	</div>
+		// );
+	
 }

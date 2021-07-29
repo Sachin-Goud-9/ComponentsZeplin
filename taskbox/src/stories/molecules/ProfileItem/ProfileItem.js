@@ -38,7 +38,7 @@ const ProfileItem = () => {
                 </ListItemIcon>
                 <ListItemAvatar>
                     <MyImage
-                        src="images/profileimg.png"
+                        src="images/logo192.png"
                         height="40px"
                         width="40px"
                         alt="PROFILE IMAGE"

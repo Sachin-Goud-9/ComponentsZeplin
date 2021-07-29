@@ -12,7 +12,7 @@ export const PrimaryJobCardInfo = Template.bind({});
 
 
 PrimaryJobCardInfo.args = {
-    imageSrc : 'images/bmwlogo.png',
+    imageSrc : 'images/logo192.png',
     positionAppliedName : "User Experience Designer",
     companyName : "BMW",
     locationName : "Hitech City Telangana"

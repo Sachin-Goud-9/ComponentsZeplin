@@ -5,6 +5,7 @@ import MyImage from '../../atoms/MyImage/MyImage';
 import CloseIcon from '@material-ui/icons/Close';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Grid } from "@material-ui/core";
 
 const JobCardInfo = ( {mapImageSrc,srcLocation,destLocation} )  => {
 
@@ -65,28 +66,28 @@ const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <div className= {classes.headerDiv}>
+        <Grid className= {classes.headerDiv}>
             <ArrowBackIcon />
             <MyTypography children="Commute Routes" variant="h6" component="h5" className={classes.typographyHeaderStyle} />
-        </div>
-        <div className={classes.imageDiv}>
+        </Grid>
+        <Grid className={classes.imageDiv}>
             <MyImage src={mapImageSrc} height="135.2px" width="330px" alt="Map Directions"/>
-        </div>
-        <div className={classes.listItemDiv}>
-            <div className={` ${classes.innerListItemDiv} ${classes.innerListItemDivStyling} `}>
-                <div className={` ${classes.srcLocationDiv} ${classes.hide} `}>
+        </Grid>
+        <Grid className={classes.listItemDiv}>
+            <Grid className={` ${classes.innerListItemDiv} ${classes.innerListItemDivStyling} `}>
+                <Grid className={` ${classes.srcLocationDiv} ${classes.hide} `}>
                     <LocationOnIcon />
                     <MyTypography noWrap className={classes.locationTypo}>{srcLocation}</MyTypography>
                     <CloseIcon />
-                </div>
-            </div>
-            <div className={classes.innerListItemDivStyling}>
-                <div className={` ${classes.srcLocationDiv} ${classes.hide} `}>
+                </Grid>
+            </Grid>
+            <Grid className={classes.innerListItemDivStyling}>
+                <Grid className={` ${classes.srcLocationDiv} ${classes.hide} `}>
                     <LocationOnIcon />
                     <MyTypography noWrap className={classes.locationTypo}>{destLocation}</MyTypography>
-                </div>
-            </div>  
-        </div>
+                </Grid>
+            </Grid>  
+        </Grid>
     </div>
   );
 }

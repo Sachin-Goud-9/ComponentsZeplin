@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import customtheme from '../../../theme';
 import { withStyles } from '@material-ui/styles';
 import { StepConnector } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 // import Mybutton from '../button/mybutton';
 
 // function getSteps() {
@@ -111,22 +112,22 @@ export default function HorizontalLinearStepper(props) {
                 <Step key={label} {...stepProps}>
                     <StepLabel {...labelProps} >{label}</StepLabel>
                 </Step>
-                );
+                );  
             })}
             </Stepper>
-        <div>
+        <Grid>
           {activeStep === steps.length ? (
-            <div>
+            <Grid>
               <Typography className={classes.instructions}>
                 All steps completed - you&apos;re finished
               </Typography>
               <Button onClick={handleReset} className={classes.button}>
                 Reset
               </Button>
-            </div>
+            </Grid>
           ) : (
-            <div>
-              <div>
+            <Grid>
+              <Grid>
                 <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                   Back
                 </Button>
@@ -149,10 +150,10 @@ export default function HorizontalLinearStepper(props) {
                 >
                   {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
                 </Button>
-              </div>
-            </div>
+              </Grid>
+            </Grid>
           )}
-        </div>
+        </Grid>
       </div>
       </ThemeProvider>
     );

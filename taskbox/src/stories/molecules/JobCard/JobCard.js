@@ -112,7 +112,7 @@ export default function JobCard({
 			>
 				<Card className={classes.root} variant="outlined">
 					<CardActionArea>
-						<div className={classes.header}>
+						<Grid className={classes.header}>
 							<MyImage
 								className={classes.logoPadding}
 								alt={logo}
@@ -120,7 +120,7 @@ export default function JobCard({
 								width="80px"
 								height="80px"
 							/>
-							<div className={` ${classes.spacing}`}>
+							<Grid className={` ${classes.spacing}`}>
 								<MyTypography variant="body1" component="p">
 									2d
 								</MyTypography>
@@ -128,8 +128,8 @@ export default function JobCard({
 									className={classes.moreIconPadding}
 									fontSize="small"
 								/>
-							</div>
-						</div>
+							</Grid>
+						</Grid>
 						<CardContent>
 							<MyTypography gutterBottom className={classes.roleTypoHeader}>
 								{roleName}
@@ -150,65 +150,66 @@ export default function JobCard({
 								Commute routes available:
 							</MyTypography>
 							{/* {Object.values(icons).map((value) => value)} */}
-							<div className={classes.iconGrp}> 
-                                {icons && icons.map(iconName => (
-                                    <iconName className={classes.icons} /> 
+							<Grid className={classes.iconGrp}> 
+                                {icons && icons.map(iconMatter => (
+                                    <iconMatter className={classes.icons} /> 
                                 ))}
-                            </div> 
+                            </Grid> 
 						</CardContent>
 					</CardActionArea>
 				</Card>
 			</div>
 		);
-	} else {
-		return (
-			<div
-				onClick={() => {
-					setOpen(!open);
-				}}
-			>
+	} 
+	// else {
+	// 	return (
+	// 		<div
+	// 			onClick={() => {
+	// 				setOpen(!open);
+	// 			}}
+	// 		>
                 
-				<Card variant="outlined" className={classes.root2}>
-					<CardActionArea>
-						<Grid container>
-							<Grid item xs={1}>
-								<MyImage alt={logo} src={logo} width="50px" height="50px" />
-							</Grid>
-							<Grid item xs={8} className={classes.jobInfoPadding}>
-								<MyTypography gutterBottom className={classes.roleTypoHeader}>
-									{roleName}
-								</MyTypography>
+	// 			<Card variant="outlined" className={classes.root2}>
+	// 				<CardActionArea>
+	// 					<Grid container>
+	// 						<Grid item xs={1}>
+	// 							<MyImage alt={logo} src={logo} width="50px" height="50px" />
+	// 						</Grid>
+	// 						<Grid item xs={8} className={classes.jobInfoPadding}>
+	// 							<MyTypography gutterBottom className={classes.roleTypoHeader}>
+	// 								{roleName}
+	// 							</MyTypography>
 
-								<MyTypography
-									className={` ${classes.companyLocationTypoHeader} ${classes.padding} `}
-								>
-									{companyName}
-								</MyTypography>
-								<MyTypography
-									className={` ${classes.companyLocationTypoHeader} `}
-								>
-									{location}
-								</MyTypography>
-							</Grid>
-                            <Grid item xs={1}></Grid>
-							<Grid item xs={2} className={classes.inCol}>
-								<div className={classes.spacing}>
-									<MyTypography variant="body1" component="p">
-										2d
-									</MyTypography>
-									<MoreHorizIcon fontSize="small" />
-								</div>
-                                <div className={classes.iconGrp}> 
-                                    {icons && icons.map(iconName => (
-                                        <span>{iconName} </span>
-                                    ))}
+	// 							<MyTypography
+	// 								className={` ${classes.companyLocationTypoHeader} ${classes.padding} `}
+	// 							>
+	// 								{companyName}
+	// 							</MyTypography>
+	// 							<MyTypography
+	// 								className={` ${classes.companyLocationTypoHeader} `}
+	// 							>
+	// 								{location}
+	// 							</MyTypography>
+	// 						</Grid>
+    //                         <Grid item xs={1}></Grid>
+	// 						<Grid item xs={2} className={classes.inCol}>
+	// 							<div className={classes.spacing}>
+	// 								<MyTypography variant="body1" component="p">
+	// 									2d
+	// 								</MyTypography>
+	// 								<MoreHorizIcon fontSize="small" />
+	// 							</div>
+    //                             <div className={classes.iconGrp}> 
+    //                                 {icons && icons.map(iconName => (
+    //                                     <span>{iconName} </span>
+    //                                 ))}
                                    
-                                </div> 
-							</Grid>
-						</Grid>
-					</CardActionArea>
-				</Card>
-			</div>
-		);
-	}
+    //                             </div> 
+	// 						</Grid>
+	// 					</Grid>
+	// 				</CardActionArea>
+	// 			</Card>
+	// 		</div>
+	// 	);
+	// }
 }

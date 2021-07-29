@@ -16,13 +16,17 @@ import ContactPhoneOutlinedIcon from '@material-ui/icons/ContactPhoneOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 
 import { createTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import { useDispatch } from 'react-redux';
+import { showPage } from '../store/actions';
 
-const SideNavBar = () => {
+export default function SideNavBar (props){
 
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
+    const [selectedIndex, setSelectedIndex] = React.useState(props.selectedIndex);
+    const dispatch = useDispatch();
 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
+
     };
 
     const listItemTheme = createTheme({
@@ -134,21 +138,21 @@ const SideNavBar = () => {
                     <ThemeProvider theme={responsiveListItemTheme}>
                         <div className={selectedIndex === 0 ? classes.selectedItemStyle : classes.listItemStyle}>
                             <MyListItem selected={selectedIndex === 0}
-                                onClick={(event) => handleListItemClick(event, 0)}
+                                onClick={(event) => {handleListItemClick(event, 0); dispatch(showPage("PAGE2"))}}
                                 icon={<DashboardOutlinedIcon className={selectedIndex === 0 ? classes.selectedIcon : classes.icon} />}
                                 text={<MyTypography children="Dashboard" variant="h4" component="h3" className={selectedIndex === 0 ? classes.selectedTypographyStyle : classes.typographyStyle} />}
                                 className={`  ${classes.listItemTextStyle}  `}  />
                         </div>
                         <div className={selectedIndex === 1 ? classes.selectedItemStyle : classes.listItemStyle}>
                             <MyListItem selected={selectedIndex === 1}
-                                onClick={(event) => handleListItemClick(event, 1)} 
+                                onClick={(event) => {handleListItemClick(event, 1); dispatch(showPage("PAGE3"))}} 
                                 icon={<WorkOutlineOutlinedIcon className={selectedIndex === 1 ? classes.selectedIcon : classes.icon} />} 
                                 text={<MyTypography children="Find Jobs" variant="h4" component="h3" className={selectedIndex === 1 ? classes.selectedTypographyStyle : classes.typographyStyle} />} 
                                 className={`  ${classes.listItemTextStyle}  `}  />
                         </div>
                         <div className={selectedIndex === 2 ? classes.selectedItemStyle : classes.listItemStyle}>
                             <MyListItem selected={selectedIndex === 2}
-                                onClick={(event) => handleListItemClick(event, 2)} 
+                                onClick={(event) => {handleListItemClick(event, 2); dispatch(showPage("PAGE4"))}} 
                                 icon={<TurnedInNotOutlinedIcon className={selectedIndex === 2 ? classes.selectedIcon : classes.icon} />} 
                                 text={<MyTypography children="Saved Jobs" variant="h4" component="h3" className={selectedIndex === 2 ? classes.selectedTypographyStyle : classes.typographyStyle} />} 
                                 className={`  ${classes.listItemTextStyle}  `} />
@@ -197,5 +201,3 @@ const SideNavBar = () => {
     );
 
 }
-
-export default SideNavBar

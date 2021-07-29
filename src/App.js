@@ -3,14 +3,18 @@ import './App.css';
 import Page1 from './organisms/Page1';
 import { Page2 } from './organisms/Page2';
 import { Page3 } from './organisms/Page3';
+import { Page4 } from './organisms/Page4';
 import Right from './organisms/RightGrid/Right';
+import { RenderPage3and4 } from './organisms/RenderPage3and4';
 
 function App() {
   return (
     <div className="App">
       {/* <Page1/> */}
-      <Page2/>
+      {/* <Page2/> */}
       {/* <Page3/> */}
+      {/* <Page4 isFindJob = { false }/> */}
+      <RenderPage3and4/>
       {/* <Right
       // head= "What it takes"  
       // body = {["High level of proficiency with leading UX Design software packages, such as Axure, Sketch, InVision, or Experience Design including the core Adobe Creative Suite products.","Excellent written and oral communication and presentation skills ","Excellent written and oral communication and presentation skills"]]

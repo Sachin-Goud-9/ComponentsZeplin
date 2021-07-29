@@ -2,6 +2,7 @@ import React from 'react'
 import { ThemeProvider, Typography } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
 import customtheme from '../../../theme'
+import CustomImage from '../../atoms/image/CustomImage'
 
 export default function AQI(props){
     return(

@@ -29,17 +29,12 @@ export function Page2(props){
     return(
         <div>
             <Grid container direction="row">
-                <Grid item className = {classes.leftGrid}>
+                {/* <Grid item className = {classes.leftGrid}>
                     <SideNavBar/>
                 </Grid>
-                <Divider flexItem/>
-                <Grid item className= { classes.rightGrid }>
-                    <TopNavBar locationItem= { <LocationListItem children="East Marredpally, Secunderabad"/> } profileItem = { <PrimaryProfileDisplay /> }/>
+                <Divider flexItem/> */}
+                <Grid item >
                     <Grid className = { classes.rightInnerGrid}>
-                        <Typography variant="h6" style = {{ paddingBottom: "20px", fontSize: "20px", fontFamily: "Montserrat", textAlign: "left" }}>
-                            Find Jobs
-                        </Typography>
-                        <JobSearch/>
                         <Typography variant="h6" style = {{ paddingTop: "20px", paddingBottom:"5px",  fontSize: "20px", fontFamily: "Montserrat", textAlign: "left" }}>
                             Recommend for you
                         </Typography>

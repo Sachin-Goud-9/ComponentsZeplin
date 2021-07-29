@@ -220,12 +220,12 @@ export default function JobCardInfo({mapImageSrc , srcLocation , destLocation}) 
 
             <TabPanel value={value} index={0}>
 
-                <div className={classes.travelInfoDiv}>
-                    <div className={classes.directionsDiv}>
-                        <div>
+                <Grid className={classes.travelInfoDiv}>
+                    <Grid className={classes.directionsDiv}>
+                        <Grid>
                             <DirectionsBusOutlinedIcon />
-                        </div>
-                        <div>
+                        </Grid>
+                        <Grid>
                             <MyTypography className={classes.innerDirectionDivText}>
                                 {
                                     "Catch a bus 38X at 3:42 PM to Secunderabad bus stand"
@@ -234,45 +234,45 @@ export default function JobCardInfo({mapImageSrc , srcLocation , destLocation}) 
                             <MyTypography className={classes.arrivalTimeText}>
                                 {"2 mins late"}
                             </MyTypography>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
 
 
-                    <div>
+                    <Grid>
                         <MyTypography className={classes.locationTimeCostText}>
                             {"Rs 65" + ' • ' + "20 mins"}
                         </MyTypography>
-                    </div>
-                </div>
+                    </Grid>
+                </Grid>
 
-                <div className={classes.travelInfoDiv}>
-                    <div className={classes.directionsDiv}>
-                        <div>
+                <Grid className={classes.travelInfoDiv}>
+                    <Grid className={classes.directionsDiv}>
+                        <Grid>
                           <DirectionsWalkIcon />
-                        </div>
-                        <div>
+                        </Grid>
+                        <Grid>
                             <MyTypography className={classes.innerDirectionDivText}>
                                 {
                                     "Head north on St.John's road"
                                 }
                             </MyTypography>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
 
 
-                    <div>
+                    <Grid>
                         <MyTypography className={classes.locationTimeCostText}>
                             {"2 mins"}
                         </MyTypography>
-                    </div>
-                </div>
+                    </Grid>
+                </Grid>
 
-                <div className={classes.travelInfoDiv}>
-                    <div className={classes.directionsDiv}>
-                        <div>
+                <Grid className={classes.travelInfoDiv}>
+                    <Grid className={classes.directionsDiv}>
+                        <Grid>
                           <TrainOutlinedIcon />
-                        </div>
-                        <div>
+                        </Grid>
+                        <Grid>
                             <MyTypography className={classes.innerDirectionDivText}>
                                 {
                                    "Catch a blue line metro towards Raidurg"
@@ -281,16 +281,16 @@ export default function JobCardInfo({mapImageSrc , srcLocation , destLocation}) 
                             <MyTypography className={classes.arrivalTimeText}>
                                 {"2 mins late"}
                             </MyTypography>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
 
 
-                    <div>
+                    <Grid>
                         <MyTypography className={classes.locationTimeCostText}>
                             {"Rs 55" + ' • ' + "36 mins"}
                         </MyTypography>
-                    </div>
-                </div>
+                    </Grid>
+                </Grid>
                 
             </TabPanel>
             <TabPanel value={value} index={1}>
